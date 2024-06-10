@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-""" lists all documents in a collection """
-
+"""
+Lists all documents in a collection
+"""
 
 def list_all(mongo_collection):
-    """mongo_collection will be the pymongo collection object
-       Return an empty list if no document in the collection
-    """
-    documents = mongo_collection.find()
-    if documents.count() == 0:
-        return []
-    return documents
+    """Lists all documents in a collection"""
+
+    # if not empty, list and return all documents in collection
+    return mongo_collection.find()

@@ -1,2 +1,2 @@
-//lists all documents with Holberton school in School
-db.school.find({ name: "Holberton school" })
+// Lists all documents with name="Holberton school"
+db.school.find({name: "Holberton school"})

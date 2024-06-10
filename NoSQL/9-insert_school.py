@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-""" inserts a new document in a based on kwarg """
+"""Insert a new document in a collection"""
 
 
 def insert_school(mongo_collection, **kwargs):
-    """ mongo_collection will be the pymongo collection object
-        Returns the new _id
-    """
-    document_id = mongo_collection.insert(kwargs)
-    return document_id
+    """Insert a new document in a collection and return the new _id"""
+    new_doc = mongo_collection.insert_one(kwargs)
+    return new_doc.inserted_id
